@@ -30,11 +30,11 @@ const Card: React.FC<ICard> = ({
           </S.LogoContainer>
 
           <S.CardInformations>
-            <Atoms.Text weight="bold" size="large">
+            <Atoms.Text weight="bold" size="large" className="company_name">
               {name}
             </Atoms.Text>
 
-            <Atoms.Text weight="bold" size="small">
+            <Atoms.Text weight="bold" size="small" className="job_title">
               {title}
             </Atoms.Text>
           </S.CardInformations>
@@ -42,16 +42,16 @@ const Card: React.FC<ICard> = ({
           <S.CardInformations>
             <div>
               <Assets.Pin />
-              <Atoms.Text weight="regular" size="small">
+              <Atoms.Text weight="regular" size="small" className="location">
                 {location.text}
               </Atoms.Text>
             </div>
 
-            <Atoms.Text weight="regular" size="small">
+            <Atoms.Text weight="regular" size="small" className="experience">
               {employment_type} , {experience}
             </Atoms.Text>
 
-            <Atoms.Text weight="regular" size="small">
+            <Atoms.Text weight="regular" size="small" className="industry">
               {industry}
             </Atoms.Text>
           </S.CardInformations>

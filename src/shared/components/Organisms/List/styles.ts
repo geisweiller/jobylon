@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints, colors, fonts } from '../../../../shared/styles/theme';
+import { breakpoints, colors, fonts, maxHeight } from '../../../../shared/styles/theme';
 
 export const ListContainer = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ export const ListContainer = styled.div`
 
   overflow-y: scroll;
 
-  height: 760px;
+  height: ${maxHeight.tablet};
 
   ::-webkit-scrollbar {
     width: 8px;
@@ -31,7 +31,7 @@ export const ListContainer = styled.div`
       display: none;
     }
 
-      max-height: 650px;
+      max-height: ${maxHeight.mobile};
     }
   }
 `;

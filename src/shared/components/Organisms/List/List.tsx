@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Atoms, Molecules } from '../../../../shared/components';
+import { IJob } from '../../../interfaces/interfaces';
 import EmptyList from './EmptyList';
 
 import { IList } from './interfaces';
@@ -9,6 +10,20 @@ import * as S from './styles';
 const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
   const [search, setSearch] = useState('');
   const [filteredJobs, setFilteredJobs] = useState(jobs);
+
+  const windowWidth = window.innerWidth;
+
+  const handleCardClick = useCallback(
+    (job: IJob) => {
+      if (windowWidth <= 480) {
+        const { urls } = job;
+        window.open(urls.ad);
+      } else {
+        setSelectedJob(job);
+      }
+    },
+    [windowWidth, window]
+  );
 
   useEffect(() => {
     setFilteredJobs(jobs);
@@ -72,7 +87,7 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
                 employment_type={employment_type}
                 experience={experience}
                 title={title}
-                onClick={() => setSelectedJob(job)}
+                onClick={() => handleCardClick(job)}
                 selectedJobId={id}
               />
             );

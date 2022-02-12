@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints, colors, fonts } from '../../../styles/theme';
+import { breakpoints, colors, fonts, maxHeight } from '../../../styles/theme';
 
 export const InformationContainer = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const InformationContainer = styled.div`
   background-color: ${colors.clear};
   border-radius: 20px;
 
-  max-height: 760px;
+  max-height: maxHeight.
 
   border: 1px solid ${colors.border};
 

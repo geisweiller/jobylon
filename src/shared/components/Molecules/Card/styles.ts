@@ -28,6 +28,11 @@ export const CardContainer = styled.button<ICardStyles>`
     `}
 
   @media (max-width: ${breakpoints.mobile}) {
+    grid-template-columns: 1fr 2fr 1fr;
+
+    svg {
+      display: none;
+    }
   }
 `;
 
@@ -55,8 +60,18 @@ export const CardInformations = styled.div`
   }
   @media (max-width: ${breakpoints.mobile}) {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
+
+    .company_name,
+    .industry {
+      display: none;
+    }
+
+    :nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 `;

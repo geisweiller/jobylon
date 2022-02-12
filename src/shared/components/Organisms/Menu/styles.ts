@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints, colors } from '../../../styles/theme';
+import { breakpoints, colors, maxHeight } from '../../../styles/theme';
 
 export const MenuContainer = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const MenuContainer = styled.div`
   width: 100%;
 
   padding: 0 10px;
-  max-height: 760px;
+  max-height: ${maxHeight.tablet};
 
   background-color: ${colors.clear};
 
