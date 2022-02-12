@@ -1,17 +1,26 @@
 import styled, { css } from 'styled-components';
-import { colors, fonts } from '../../../styles/theme';
+import { breakpoints, colors, fonts } from '../../../styles/theme';
 import { IText } from './interfaces';
 
 const textModifiers = {
   sizes: {
     small: () => css`
       font-size: ${fonts.size.sm};
+      @media (max-width: ${breakpoints.mobileMd}) {
+        font-size: ${fonts.size.xs};
+      }
     `,
     medium: () => css`
       font-size: ${fonts.size.md};
+      @media (max-width: ${breakpoints.mobileMd}) {
+        font-size: ${fonts.size.sm};
+      }
     `,
     large: () => css`
       font-size: ${fonts.size.lg};
+      @media (max-width: ${breakpoints.mobileMd}) {
+        font-size: ${fonts.size.md};
+      }
     `,
   },
   weight: {

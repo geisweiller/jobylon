@@ -60,6 +60,7 @@ export const Option = styled.li<IOptionStyles>`
   } 
 
   @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.size.xs};
     svg {
       display: none;
     }

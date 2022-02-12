@@ -13,6 +13,7 @@ export const colors = {
 
 export const fonts = {
   size: {
+    xs: '8px',
     sm: '12px',
     md: '16px',
     lg: '18px',
@@ -28,6 +29,7 @@ export const fonts = {
 };
 
 export const breakpoints = {
+  mobileMd: '375px',
   mobile: '480px',
   tablet: '768px',
   laptop: '1024px',

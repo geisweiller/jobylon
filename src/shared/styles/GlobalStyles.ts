@@ -23,10 +23,13 @@ export default createGlobalStyle`
   @media (max-width: ${breakpoints.tablet}) {
     font-size: 80%;
   }
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.mobile}) {
     font-size: 70%;
-  } */
-}
+  }
+  @media (max-width: ${breakpoints.mobileMd}) {
+    font-size: 60%;
+  }
+} */
 
 html, body, #root {
   height: 100vh;

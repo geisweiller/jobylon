@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/theme';
+import { breakpoints, colors, fonts } from '../../../styles/theme';
 
 export const SelectContainer = styled.div`
   border: 1px solid ${colors.border};
@@ -17,4 +17,8 @@ export const CustomSelect = styled.select`
   border: none;
   outline: none;
   background-color: ${colors.clear};
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.size.xs};
+  }
 `;

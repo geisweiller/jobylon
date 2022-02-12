@@ -30,9 +30,7 @@ export const ListContainer = styled.div`
     ::-webkit-scrollbar {
       display: none;
     }
-
-      max-height: ${maxHeight.mobile};
-    }
+    max-height: ${maxHeight.mobile};
   }
 `;
 

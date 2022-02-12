@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/theme';
+import { breakpoints, colors, fonts } from '../../../styles/theme';
 
 export const InputContainer = styled.div`
   display: flex;
@@ -15,6 +15,15 @@ export const CustomInput = styled.input`
   outline: none;
   margin-left: 10px;
   padding: 10px;
+
+  ::placeholder {
+    color: ${colors.text};
+    font-size: ${fonts.size.sm};
+
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.size.xs};
+    }
+  }
 `;
 
 export const SearchButton = styled.button`
@@ -26,4 +35,8 @@ export const SearchButton = styled.button`
   border-bottom-right-radius: 10px;
   color: ${colors.clear};
   font-weight: bold;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${fonts.size.xs};
+  }
 `;
