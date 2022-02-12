@@ -7,7 +7,7 @@ const AppRoutes = () => {
     <BrowserRouter>
       <DefaultTemplate>
         <Routes>
-          <Route path="/" element={<Navigate to="/jobs" />} />
+          <Route path="/jobylon" element={<Navigate to="/jobs" />} />
           <Route path="/jobs" element={<JobsPage />} />
           <Route path="/my-jobs" element={<PageNotFound />} />
           <Route path="/reports" element={<PageNotFound />} />

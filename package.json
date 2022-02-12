@@ -1,10 +1,12 @@
 {
   "name": "jobylon",
+  "homepage": "http://geisweiller.github.io/jobylon/",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@types/babel__generator": "^7.6.4",
     "axios": "^0.21.1",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.1",
     "react-content-loader": "^6.1.0",
     "react-dom": "^17.0.2",
@@ -50,7 +52,8 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "CI='' react-app-rewired build",
+    "build": "react-app-rewired build",
+    "deploy": "gh-pages -d build",
     "test": "jest --env=jsdom",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
