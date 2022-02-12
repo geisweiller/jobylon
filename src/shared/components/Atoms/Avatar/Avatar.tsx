@@ -5,7 +5,7 @@ import { IAvatar } from './interfaces';
 import * as S from './styles';
 
 const Avatar: React.FC<IAvatar> = ({ alt, size = 'large', src }) => {
-  return <S.CustomAvatar src={src || profile} alt={alt} size={size} />;
+  return <S.CustomAvatar src={src || profile} alt={alt} size={size} data-testid="avatar" />;
 };
 
 export default Avatar;

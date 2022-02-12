@@ -1,1 +1,3 @@
-export enum SelectOptions {}
+export enum SelectOptions {
+  Experience = 'Experience',
+}

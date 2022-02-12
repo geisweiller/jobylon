@@ -7,7 +7,7 @@ const Button: React.FC<
 > = ({ children, ...props }) => {
   const { disabled, onClick } = props;
   return (
-    <S.CustomButton disabled={disabled} onClick={onClick}>
+    <S.CustomButton disabled={disabled} onClick={onClick} data-testid="button">
       {children}
     </S.CustomButton>
   );

@@ -19,13 +19,13 @@ export default createGlobalStyle`
   }
 };
 
-html {
+/* html {
   @media (max-width: ${breakpoints.tablet}) {
     font-size: 80%;
   }
   @media (max-width: ${breakpoints.tablet}) {
     font-size: 70%;
-  }
+  } */
 }
 
 html, body, #root {

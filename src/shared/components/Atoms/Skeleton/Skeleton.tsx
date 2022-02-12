@@ -35,6 +35,7 @@ const Skeleton: React.FC<ISkeleton> = ({
             ry="5"
             width="100%"
             height={lineHeight}
+            data-testid="skeleton_line"
           />
         ))}
       </ContentLoader>

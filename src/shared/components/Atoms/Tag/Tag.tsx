@@ -5,7 +5,7 @@ import * as S from './styles';
 
 const Tag: React.FC = ({ children }) => {
   return (
-    <S.CustomTag>
+    <S.CustomTag data-testid="tag">
       <Text size="small">{children}</Text>
     </S.CustomTag>
   );

@@ -5,7 +5,7 @@ import * as S from './styles';
 
 const Logo: React.FC<ILogo> = ({ size = 'medium', src }) => {
   if (src) {
-    return <S.Logo src={src} size={size} />;
+    return <S.Logo src={src} size={size} data-testid="logo" />;
   }
   return null;
 };

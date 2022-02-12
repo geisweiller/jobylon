@@ -4,7 +4,7 @@ export interface ISelect {
 }
 
 export interface ISelectOption {
-  id: string;
+  id: number;
   label: string;
   value: string;
 }

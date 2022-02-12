@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Atoms, Molecules } from '../../../../shared/components';
+import { Placeholders } from '../../../enums/placeholders';
 import { IJob } from '../../../interfaces/interfaces';
+import { selectOptions } from '../../../utils';
 import EmptyList from './EmptyList';
 
 import { IList } from './interfaces';
@@ -32,10 +34,15 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
   const handleSearch = useCallback(
     (search: string) => {
       setSearch(search);
-      const filtered = jobs?.filter(({ title, company }) => {
+      const filtered = jobs?.filter(({ title, company, locations }) => {
         return (
           title.toLowerCase().includes(search.toLowerCase()) ||
-          company.name.toLowerCase().includes(search.toLowerCase())
+          company.name.toLowerCase().includes(search.toLowerCase()) ||
+          locations
+            .map(({ location }) => location.text)
+            .join(' ')
+            .toLowerCase()
+            .includes(search.toLowerCase())
         );
       });
       setFilteredJobs(filtered);
@@ -51,7 +58,7 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
   return (
     <S.ListContainer>
       <S.ListHeader>
-        <Atoms.SearchField handleSearch={handleSearch} />
+        <Atoms.SearchField handleSearch={handleSearch} placeholder={Placeholders.Search} />
       </S.ListHeader>
 
       {!!search && (
@@ -72,7 +79,7 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
       )}
 
       <S.SortByContainer>
-        <Atoms.Select options={[]} onChange={() => console.log('')} />
+        <Atoms.Select options={selectOptions} onChange={() => console.log('')} />
       </S.SortByContainer>
 
       {filteredJobs.length > 0 ? (
