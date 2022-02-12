@@ -7,6 +7,7 @@ export interface ICard extends React.HTMLProps<HTMLButtonElement> {
   experience: string;
   title: string;
   selectedJobId: number;
+  loading: boolean;
 }
 
 export interface ICardStyles {

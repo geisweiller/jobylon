@@ -14,9 +14,10 @@ const Card: React.FC<ICard> = ({
   experience,
   title,
   selectedJobId,
+  loading,
   ...props
 }) => {
-  const { selectedJob, loading } = useJobs();
+  const { selectedJob } = useJobs();
   const { logo, name, industry } = company;
   const { location } = locations;
   return (
@@ -24,12 +25,16 @@ const Card: React.FC<ICard> = ({
       {loading ? (
         <Atoms.Skeleton />
       ) : (
-        <S.CardContainer onClick={props.onClick} selected={selectedJob.id === selectedJobId}>
+        <S.CardContainer
+          onClick={props.onClick}
+          selected={selectedJob?.id === selectedJobId}
+          data-testid="card_container"
+        >
           <S.LogoContainer>
             <Atoms.Logo size="medium" src={logo} />
           </S.LogoContainer>
 
-          <S.CardInformations>
+          <S.CardInformations data-testid="card_informations">
             <Atoms.Text weight="bold" size="large" className="company_name">
               {name}
             </Atoms.Text>
@@ -39,7 +44,7 @@ const Card: React.FC<ICard> = ({
             </Atoms.Text>
           </S.CardInformations>
 
-          <S.CardInformations>
+          <S.CardInformations data-testid="card_informations">
             <div>
               <Assets.Pin />
               <Atoms.Text weight="regular" size="small" className="location">

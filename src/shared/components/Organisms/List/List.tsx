@@ -96,6 +96,7 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
                 title={title}
                 onClick={() => handleCardClick(job)}
                 selectedJobId={id}
+                loading={loading}
               />
             );
           })}
