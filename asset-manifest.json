@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/jobylon/static/js/main.0e2744da.chunk.js",
+    "main.js.map": "/jobylon/static/js/main.0e2744da.chunk.js.map",
+    "runtime-main.js": "/jobylon/static/js/runtime-main.887cc27d.js",
+    "runtime-main.js.map": "/jobylon/static/js/runtime-main.887cc27d.js.map",
+    "static/js/2.ab4ffb1d.chunk.js": "/jobylon/static/js/2.ab4ffb1d.chunk.js",
+    "static/js/2.ab4ffb1d.chunk.js.map": "/jobylon/static/js/2.ab4ffb1d.chunk.js.map",
+    "index.html": "/jobylon/index.html",
+    "static/js/2.ab4ffb1d.chunk.js.LICENSE.txt": "/jobylon/static/js/2.ab4ffb1d.chunk.js.LICENSE.txt",
+    "static/media/404_not_found.9147aaf8.svg": "/jobylon/static/media/404_not_found.9147aaf8.svg",
+    "static/media/chat.d447e0e7.svg": "/jobylon/static/media/chat.d447e0e7.svg",
+    "static/media/jobylon_logo.e10088d6.svg": "/jobylon/static/media/jobylon_logo.e10088d6.svg",
+    "static/media/jobylon_logo_full.89dca534.svg": "/jobylon/static/media/jobylon_logo_full.89dca534.svg",
+    "static/media/list.260109a1.svg": "/jobylon/static/media/list.260109a1.svg",
+    "static/media/location_pin.93f2f39d.svg": "/jobylon/static/media/location_pin.93f2f39d.svg",
+    "static/media/no_data.e426f4aa.svg": "/jobylon/static/media/no_data.e426f4aa.svg",
+    "static/media/profile.7c845242.jpeg": "/jobylon/static/media/profile.7c845242.jpeg",
+    "static/media/reports.87a5b2fb.svg": "/jobylon/static/media/reports.87a5b2fb.svg",
+    "static/media/search.885425e1.svg": "/jobylon/static/media/search.885425e1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.887cc27d.js",
+    "static/js/2.ab4ffb1d.chunk.js",
+    "static/js/main.0e2744da.chunk.js"
+  ]
+}
