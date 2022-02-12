@@ -33,10 +33,6 @@ export default createGlobalStyle`
 
 html, body, #root {
   height: 100vh;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    height: auto;
-  }
 }
 #root {
   display: flex;
