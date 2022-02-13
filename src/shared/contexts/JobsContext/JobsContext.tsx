@@ -9,6 +9,7 @@ export const JobsProvider: React.FC = ({ children }) => {
   const [jobs, setJobs] = useState<IJob[]>([]);
   const [selectedJob, setSelectedJob] = useState<IJob>({} as IJob);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const getData = useCallback(async () => {
     setLoading(true);
@@ -16,7 +17,9 @@ export const JobsProvider: React.FC = ({ children }) => {
       const { data }: { data: IApiResponse[] } = await api.get('');
       setJobs(data);
       setSelectedJob(data[0]);
+      setError(false);
     } catch (error) {
+      setError(true);
       console.log(error);
     } finally {
       setTimeout(() => {
@@ -35,7 +38,9 @@ export const JobsProvider: React.FC = ({ children }) => {
         jobs,
         loading,
         selectedJob,
+        error,
         setSelectedJob,
+        getData,
       }}
     >
       {children}

@@ -60,11 +60,11 @@ const jobs = [job];
 
 window.open = jest.fn();
 
-const setSeletecJob = jest.fn();
+const setSelected = jest.fn();
 describe('List Component', () => {
   it('should be able to render List and select a job', () => {
     const { getByTestId } = render(
-      <List jobs={jobs} setSelectedJob={setSeletecJob} loading={false} />
+      <List jobs={jobs} setSelectedJob={setSelected} loading={false} error={false} />
     );
 
     const container = getByTestId('list_container');
@@ -85,7 +85,7 @@ describe('List Component', () => {
 
   it('should be able to search for jobs', () => {
     const { getByTestId, getByText } = render(
-      <List jobs={jobs} setSelectedJob={setSeletecJob} loading={false} />
+      <List jobs={jobs} setSelectedJob={setSelected} loading={false} error={false} />
     );
 
     const search = getByTestId('searchfield_input') as HTMLInputElement;
@@ -102,5 +102,17 @@ describe('List Component', () => {
     fireEvent.click(button);
 
     fireEvent.click(clearButton);
+  });
+
+  it('should be empty', () => {
+    const { getByTestId, getByText } = render(
+      <List jobs={[]} setSelectedJob={setSelected} loading={false} error />
+    );
+
+    const empty = getByTestId('empty_list');
+    const error = getByText('Sorry, something went wrong. Please try again later.');
+
+    expect(empty).toBeTruthy();
+    expect(error).toBeTruthy();
   });
 });

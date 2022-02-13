@@ -6,15 +6,14 @@ import { IInformation } from './interfaces';
 
 import * as S from './styles';
 
-const Information: React.FC<IInformation> = ({ job, loading }) => {
-  const { company, skills, urls } = job;
+const Information: React.FC<IInformation> = ({ job, loading, error }) => {
   return (
-    <S.InformationContainer data-testid="info_container">
+    <S.InformationContainer data-testid="info_container" hide={error}>
       <S.InformationHeader data-testid="info_header">
         {loading ? (
           <Atoms.Skeleton width={80} height={80} />
         ) : (
-          <Atoms.Logo src={company?.logo} size="large" />
+          <Atoms.Logo src={job?.company?.logo} size="large" />
         )}
 
         {loading ? (
@@ -22,10 +21,10 @@ const Information: React.FC<IInformation> = ({ job, loading }) => {
         ) : (
           <>
             <Atoms.Text weight="bold" size="large">
-              {job.title}
+              {job?.title}
             </Atoms.Text>
             <Atoms.Text weight="regular" size="medium">
-              at <strong>{company?.name}</strong>
+              at <strong>{job?.company?.name}</strong>
             </Atoms.Text>
           </>
         )}
@@ -37,13 +36,13 @@ const Information: React.FC<IInformation> = ({ job, loading }) => {
           {loading ? (
             <Atoms.Skeleton width="100%" height="100%" type="text" />
           ) : (
-            <S.SkillInformationContainer dangerouslySetInnerHTML={{ __html: skills }} />
+            <S.SkillInformationContainer dangerouslySetInnerHTML={{ __html: job?.skills }} />
           )}
         </S.SkillsContainer>
       </S.InformationContent>
 
       <S.InformationFooter data-testid="info_footer">
-        <Atoms.Button disabled={loading} onClick={() => window.open(urls.ad)}>
+        <Atoms.Button disabled={loading} onClick={() => window.open(job?.urls.ad)}>
           I'm interested
         </Atoms.Button>
       </S.InformationFooter>

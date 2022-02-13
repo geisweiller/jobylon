@@ -2,17 +2,16 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Atoms, Molecules } from '../../../../shared/components';
 import { Placeholders } from '../../../enums/placeholders';
 import { IJob } from '../../../interfaces/interfaces';
-import { selectOptions } from '../../../utils';
+import { selectOptions, sortByExperience } from '../../../utils';
 import EmptyList from './EmptyList';
 
 import { IList } from './interfaces';
 
 import * as S from './styles';
 
-const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
+const List: React.FC<IList> = ({ jobs, setSelectedJob, loading, error }) => {
   const [search, setSearch] = useState('');
-  const [filteredJobs, setFilteredJobs] = useState(jobs);
-
+  const [filteredJobs, setFilteredJobs] = useState<IJob[]>([]);
   const windowWidth = window.innerWidth;
 
   const handleCardClick = useCallback(
@@ -50,6 +49,20 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
     [search, setSearch, jobs]
   );
 
+  const handleSortBy = useCallback(
+    (order: string) => {
+      if (order === 'crescent') {
+        const sorted = sortByExperience(filteredJobs);
+        setFilteredJobs(sorted);
+      }
+      if (order === 'decrescent') {
+        const sorted = sortByExperience(filteredJobs).reverse();
+        setFilteredJobs(sorted);
+      }
+    },
+    [filteredJobs]
+  );
+
   const handleClearFilter = useCallback(() => {
     setSearch('');
     setFilteredJobs(jobs);
@@ -79,16 +92,16 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
       )}
 
       <S.SortByContainer data-testid="list_sort_by_container">
-        <Atoms.Select options={selectOptions} onChange={() => console.log('')} />
+        <Atoms.Select options={selectOptions} onChange={handleSortBy} />
       </S.SortByContainer>
 
-      {filteredJobs.length > 0 ? (
+      {filteredJobs?.length > 0 ? (
         <S.JobsWrapper>
-          {filteredJobs.map((job) => {
+          {filteredJobs.map((job, index) => {
             const { company, locations, id, employment_type, experience, title } = job;
             return (
               <Molecules.Card
-                key={id}
+                key={index}
                 company={company}
                 locations={locations[0]}
                 employment_type={employment_type}
@@ -102,7 +115,7 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
           })}
         </S.JobsWrapper>
       ) : (
-        !loading && <EmptyList />
+        !loading && <EmptyList error={error} />
       )}
     </S.ListContainer>
   );

@@ -6,7 +6,7 @@ import * as S from './styles';
 
 const NotFound: React.FC = () => {
   return (
-    <S.Container>
+    <S.Container data-testid="not_found_container">
       <Atoms.Text weight="bold" size="small">
         Sorry, the page you are looking for does not exist.
       </Atoms.Text>

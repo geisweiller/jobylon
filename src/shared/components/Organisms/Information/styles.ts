@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { breakpoints, colors, fonts, maxHeight } from '../../../styles/theme';
+import { IInformationStyles } from './interfaces';
 
-export const InformationContainer = styled.div`
+export const InformationContainer = styled.div<IInformationStyles>`
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -9,14 +10,20 @@ export const InformationContainer = styled.div`
   background-color: ${colors.clear};
   border-radius: 20px;
 
-  max-height: maxHeight.
+  max-height: ${maxHeight.medium};
 
   border: 1px solid ${colors.border};
 
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
 
+  ${(props) =>
+    props.hide &&
+    `
+    display: none;
+  `}
+
   @media (max-width: ${breakpoints.tablet}) {
-    max-height: 630px;
+    max-height: auto;
   }
 
   @media (max-width: ${breakpoints.mobile}) {

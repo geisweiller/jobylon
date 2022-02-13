@@ -36,6 +36,6 @@ export const breakpoints = {
 };
 
 export const maxHeight = {
-  mobile: '650px',
-  tablet: '760px',
+  small: '650px',
+  medium: '760px',
 };

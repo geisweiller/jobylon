@@ -60,7 +60,9 @@ window.open = jest.fn();
 
 describe('Information Component', () => {
   it('should be able to render Information', () => {
-    const { getByTestId, getAllByTestId } = render(<Information job={job} loading={false} />);
+    const { getByTestId, getAllByTestId } = render(
+      <Information job={job} loading={false} error={false} />
+    );
 
     const container = getByTestId('info_container');
     const header = getByTestId('info_header');
@@ -78,7 +80,7 @@ describe('Information Component', () => {
   });
 
   it('should be able to click button to go to ad', () => {
-    const { getByTestId } = render(<Information job={job} loading={false} />);
+    const { getByTestId } = render(<Information job={job} loading={false} error={false} />);
 
     const button = getByTestId('button');
 
@@ -87,7 +89,7 @@ describe('Information Component', () => {
   });
 
   it('should render skeletons instead job', () => {
-    const { getAllByTestId } = render(<Information job={job} loading />);
+    const { getAllByTestId } = render(<Information job={job} loading error={false} />);
 
     const skeleton = getAllByTestId('skeleton');
 

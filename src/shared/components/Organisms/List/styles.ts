@@ -11,7 +11,7 @@ export const ListContainer = styled.div`
 
   overflow-y: scroll;
 
-  height: ${maxHeight.tablet};
+  height: ${maxHeight.medium};
 
   ::-webkit-scrollbar {
     width: 8px;
@@ -30,7 +30,7 @@ export const ListContainer = styled.div`
     ::-webkit-scrollbar {
       display: none;
     }
-    max-height: ${maxHeight.mobile};
+    max-height: ${maxHeight.small};
   }
 `;
 
@@ -96,4 +96,8 @@ export const EmptyListContainer = styled.div`
   justify-content: center;
 
   padding: 20px;
+
+  svg {
+    margin-top: 40px;
+  }
 `;

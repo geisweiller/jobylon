@@ -8,7 +8,7 @@ export const MenuContainer = styled.div`
   width: 100%;
 
   padding: 0 10px;
-  max-height: ${maxHeight.tablet};
+  max-height: ${maxHeight.medium};
 
   background-color: ${colors.clear};
 

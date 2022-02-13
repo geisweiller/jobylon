@@ -5,7 +5,7 @@ import * as S from './styles';
 
 const DefaultTemplate: React.FC = ({ children }) => {
   return (
-    <S.TemplateContainer>
+    <S.TemplateContainer data-testid="template_container">
       <Organisms.Menu />
       {children}
     </S.TemplateContainer>
