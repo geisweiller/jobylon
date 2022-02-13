@@ -78,6 +78,9 @@ export const SearchResultsContainer = styled.div`
 
   button {
     background-color: transparent;
+    p {
+      color: ${colors.lightBlue};
+    }
   }
 `;
 

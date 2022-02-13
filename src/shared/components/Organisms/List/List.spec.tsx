@@ -115,4 +115,18 @@ describe('List Component', () => {
     expect(empty).toBeTruthy();
     expect(error).toBeTruthy();
   });
+
+  it('should be able to sort jobs', () => {
+    const { getByTestId } = render(
+      <List jobs={[]} setSelectedJob={setSelected} loading={false} error={false} />
+    );
+
+    const sortBy = getByTestId('select') as HTMLSelectElement;
+
+    fireEvent.change(sortBy, { target: { value: 'crescent' } });
+    expect(sortBy.value).toBe('crescent');
+
+    fireEvent.change(sortBy, { target: { value: 'decrescent' } });
+    expect(sortBy.value).toBe('decrescent');
+  });
 });

@@ -53,11 +53,11 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading, error }) => {
     (order: string) => {
       if (order === 'crescent') {
         const sorted = sortByExperience(filteredJobs);
-        setFilteredJobs(sorted);
+        setFilteredJobs([...sorted]);
       }
       if (order === 'decrescent') {
         const sorted = sortByExperience(filteredJobs).reverse();
-        setFilteredJobs(sorted);
+        setFilteredJobs([...sorted]);
       }
     },
     [filteredJobs]
@@ -97,11 +97,11 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading, error }) => {
 
       {filteredJobs?.length > 0 ? (
         <S.JobsWrapper>
-          {filteredJobs.map((job, index) => {
+          {filteredJobs.map((job) => {
             const { company, locations, id, employment_type, experience, title } = job;
             return (
               <Molecules.Card
-                key={index}
+                key={id}
                 company={company}
                 locations={locations[0]}
                 employment_type={employment_type}
