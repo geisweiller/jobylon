@@ -9,11 +9,11 @@ export const TemplateContainer = styled.div`
 
   align-items: center;
 
-  padding: 10px;
   max-width: 1400px;
 
   @media (max-width: ${breakpoints.tablet}) {
     display: flex;
     flex-direction: column;
+    padding: 10px;
   }
 `;
