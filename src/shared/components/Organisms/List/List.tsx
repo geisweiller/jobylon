@@ -56,13 +56,13 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
   }, [jobs]);
 
   return (
-    <S.ListContainer>
-      <S.ListHeader>
+    <S.ListContainer data-testid="list_container">
+      <S.ListHeader data-testid="list_header">
         <Atoms.SearchField handleSearch={handleSearch} placeholder={Placeholders.Search} />
       </S.ListHeader>
 
       {!!search && (
-        <S.SearchResultsContainer>
+        <S.SearchResultsContainer data-testid="list_search_results">
           <div>
             <Atoms.Text size="small" weight="bold">
               Showing results for
@@ -78,7 +78,7 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading }) => {
         </S.SearchResultsContainer>
       )}
 
-      <S.SortByContainer>
+      <S.SortByContainer data-testid="list_sort_by_container">
         <Atoms.Select options={selectOptions} onChange={() => console.log('')} />
       </S.SortByContainer>
 

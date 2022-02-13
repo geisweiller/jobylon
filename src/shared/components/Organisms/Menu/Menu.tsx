@@ -34,11 +34,11 @@ const Menu: React.FC = () => {
   ];
 
   return (
-    <S.MenuContainer>
-      <S.MenuHeader>
+    <S.MenuContainer data-testid="menu_container">
+      <S.MenuHeader data-testid="menu_header">
         <Assets.JobylonLogoFull />
 
-        <S.UserInformationContainer>
+        <S.UserInformationContainer data-testid="user_container">
           <Atoms.Avatar />
 
           <div>

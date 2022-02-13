@@ -9,8 +9,8 @@ import * as S from './styles';
 const Information: React.FC<IInformation> = ({ job, loading }) => {
   const { company, skills, urls } = job;
   return (
-    <S.InformationContainer>
-      <S.InformationHeader>
+    <S.InformationContainer data-testid="info_container">
+      <S.InformationHeader data-testid="info_header">
         {loading ? (
           <Atoms.Skeleton width={80} height={80} />
         ) : (
@@ -31,7 +31,7 @@ const Information: React.FC<IInformation> = ({ job, loading }) => {
         )}
       </S.InformationHeader>
 
-      <S.InformationContent>
+      <S.InformationContent data-testid="info_content">
         <S.SkillsContainer>
           <h5>SKILLS & REQUIREMENTS</h5>
           {loading ? (
@@ -42,7 +42,7 @@ const Information: React.FC<IInformation> = ({ job, loading }) => {
         </S.SkillsContainer>
       </S.InformationContent>
 
-      <S.InformationFooter>
+      <S.InformationFooter data-testid="info_footer">
         <Atoms.Button disabled={loading} onClick={() => window.open(urls.ad)}>
           I'm interested
         </Atoms.Button>
