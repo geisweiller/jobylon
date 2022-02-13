@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/jobylon/static/js/main.fc936b6f.chunk.js",
-    "main.js.map": "/jobylon/static/js/main.fc936b6f.chunk.js.map",
+    "main.js": "/jobylon/static/js/main.bfcd7b6e.chunk.js",
+    "main.js.map": "/jobylon/static/js/main.bfcd7b6e.chunk.js.map",
     "runtime-main.js": "/jobylon/static/js/runtime-main.887cc27d.js",
     "runtime-main.js.map": "/jobylon/static/js/runtime-main.887cc27d.js.map",
-    "static/js/2.ab4ffb1d.chunk.js": "/jobylon/static/js/2.ab4ffb1d.chunk.js",
-    "static/js/2.ab4ffb1d.chunk.js.map": "/jobylon/static/js/2.ab4ffb1d.chunk.js.map",
+    "static/js/2.f84286d6.chunk.js": "/jobylon/static/js/2.f84286d6.chunk.js",
+    "static/js/2.f84286d6.chunk.js.map": "/jobylon/static/js/2.f84286d6.chunk.js.map",
     "index.html": "/jobylon/index.html",
-    "static/js/2.ab4ffb1d.chunk.js.LICENSE.txt": "/jobylon/static/js/2.ab4ffb1d.chunk.js.LICENSE.txt",
+    "static/js/2.f84286d6.chunk.js.LICENSE.txt": "/jobylon/static/js/2.f84286d6.chunk.js.LICENSE.txt",
     "static/media/404_not_found.9147aaf8.svg": "/jobylon/static/media/404_not_found.9147aaf8.svg",
     "static/media/chat.d447e0e7.svg": "/jobylon/static/media/chat.d447e0e7.svg",
     "static/media/jobylon_logo.e10088d6.svg": "/jobylon/static/media/jobylon_logo.e10088d6.svg",
@@ -22,7 +22,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.887cc27d.js",
-    "static/js/2.ab4ffb1d.chunk.js",
-    "static/js/main.fc936b6f.chunk.js"
+    "static/js/2.f84286d6.chunk.js",
+    "static/js/main.bfcd7b6e.chunk.js"
   ]
 }
