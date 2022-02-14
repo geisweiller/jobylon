@@ -11,6 +11,10 @@ export const TemplateContainer = styled.div`
 
   max-width: 1400px;
 
+  @media (max-width: ${breakpoints.laptop}) {
+    padding: 10px;
+  }
+
   @media (max-width: ${breakpoints.tablet}) {
     display: flex;
     flex-direction: column;
