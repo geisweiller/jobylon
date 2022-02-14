@@ -5,7 +5,8 @@ import * as S from './styles';
 
 const MenuOptions: React.FC<IMenuOptions> = ({ options }) => {
   const navigate = useNavigate();
-  const activeRoute = useLocation().pathname.split('/')[1];
+  const activeRoute = useLocation().pathname.replace('/', '');
+
   return (
     <S.OptionsContainer data-testid="options_container">
       <S.OptionsList>
