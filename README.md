@@ -1,8 +1,8 @@
-# Jobylon Senior Frontend Assessement
+# Jobylon Senior Frontend Assessment
 
 ### Description:
 
-- Developed solution using ReactJs for Jobylon assessement
+- Developed solution using ReactJs for Jobylon assessment
 
 ## Instructions (Linux):
 
