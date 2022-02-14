@@ -17,7 +17,6 @@ $ sudo apt install npm
 ```
 $ npm --version
 $ node --version
-
 ```
 
 2. To run the app
@@ -30,12 +29,15 @@ and
 
 ```
 $ npm start
-
 ```
 
 Open up your browser and browser your server's IP
 
-e.g: http://server-ip:3000
+
+e.g: 
+```
+http://server-ip:3000
+```
 
 3. To run tests
 
