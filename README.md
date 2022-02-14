@@ -33,7 +33,11 @@ $ npm start
 
 Open up your browser and browser your server's IP
 
-e.g: http://server-ip:3000
+
+e.g: 
+```
+http://server-ip:3000
+```
 
 3. To run tests
 
