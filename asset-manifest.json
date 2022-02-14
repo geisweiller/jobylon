@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/jobylon/static/js/main.a278b2a4.chunk.js",
-    "main.js.map": "/jobylon/static/js/main.a278b2a4.chunk.js.map",
+    "main.js": "/jobylon/static/js/main.04c504b2.chunk.js",
+    "main.js.map": "/jobylon/static/js/main.04c504b2.chunk.js.map",
     "runtime-main.js": "/jobylon/static/js/runtime-main.887cc27d.js",
     "runtime-main.js.map": "/jobylon/static/js/runtime-main.887cc27d.js.map",
     "static/js/2.f84286d6.chunk.js": "/jobylon/static/js/2.f84286d6.chunk.js",
@@ -23,6 +23,6 @@
   "entrypoints": [
     "static/js/runtime-main.887cc27d.js",
     "static/js/2.f84286d6.chunk.js",
-    "static/js/main.a278b2a4.chunk.js"
+    "static/js/main.04c504b2.chunk.js"
   ]
 }
