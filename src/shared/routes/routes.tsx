@@ -7,11 +7,11 @@ const AppRoutes = () => {
     <BrowserRouter>
       <DefaultTemplate>
         <Routes>
-          <Route path="/jobylon" element={<Navigate to="/jobs" />} />
-          <Route path="/jobs" element={<JobsPage />} />
-          <Route path="/my-jobs" element={<PageNotFound />} />
-          <Route path="/reports" element={<PageNotFound />} />
-          <Route path="/chat" element={<PageNotFound />} />
+          <Route path="/jobylon" element={<Navigate to="/jobylon/jobs" />} />
+          <Route path="/jobylon/jobs" element={<JobsPage />} />
+          <Route path="/jobylon/my-jobs" element={<PageNotFound />} />
+          <Route path="/jobylon/reports" element={<PageNotFound />} />
+          <Route path="/jobylon/chat" element={<PageNotFound />} />
         </Routes>
       </DefaultTemplate>
     </BrowserRouter>

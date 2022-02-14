@@ -11,25 +11,25 @@ const Menu: React.FC = () => {
       id: 1,
       label: EMenuOptions.Jobs,
       icon: <Assets.Search />,
-      route: 'jobs',
+      route: 'jobylon/jobs',
     },
     {
       id: 2,
       label: EMenuOptions.MyJobs,
       icon: <Assets.List />,
-      route: 'my-jobs',
+      route: 'jobylon/my-jobs',
     },
     {
       id: 3,
       label: EMenuOptions.Reports,
       icon: <Assets.Reports />,
-      route: 'reports',
+      route: 'jobylon/reports',
     },
     {
       id: 4,
       label: EMenuOptions.Messages,
       icon: <Assets.Chat />,
-      route: 'chat',
+      route: 'jobylon/chat',
     },
   ];
 
