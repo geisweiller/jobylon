@@ -71,7 +71,11 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading, error }) => {
   return (
     <S.ListContainer data-testid="list_container">
       <S.ListHeader data-testid="list_header">
-        <Atoms.SearchField handleSearch={handleSearch} placeholder={Placeholders.Search} />
+        <Atoms.SearchField
+          handleSearch={handleSearch}
+          placeholder={Placeholders.Search}
+          disabled={loading}
+        />
       </S.ListHeader>
 
       {!!search && (
@@ -92,7 +96,7 @@ const List: React.FC<IList> = ({ jobs, setSelectedJob, loading, error }) => {
       )}
 
       <S.SortByContainer data-testid="list_sort_by_container">
-        <Atoms.Select options={selectOptions} onChange={handleSortBy} />
+        <Atoms.Select options={selectOptions} onChange={handleSortBy} disabled={loading} />
       </S.SortByContainer>
 
       {filteredJobs?.length > 0 ? (

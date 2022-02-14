@@ -24,8 +24,13 @@ const SearchField: React.FC<ISearchField> = ({ handleSearch, placeholder, ...pro
         placeholder={placeholder}
         value={props.value}
         onChange={props.onChange}
+        disabled={props.disabled}
       />
-      <S.SearchButton onClick={handleOnClick} data-testid="searchfield_button">
+      <S.SearchButton
+        onClick={handleOnClick}
+        data-testid="searchfield_button"
+        disabled={props.disabled}
+      >
         Search
       </S.SearchButton>
     </S.InputContainer>
