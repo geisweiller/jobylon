@@ -25,4 +25,18 @@ describe('Get data', () => {
       expect(result.current.loading).toBeTruthy();
     });
   });
+
+  it('shouldnt be able to get data', async () => {
+    apiMock.onGet('').reply(500);
+
+    const { result } = renderHook(() => useJobs(), {
+      wrapper: JobsProvider,
+    });
+    waitFor(() => {
+      result.current.getData();
+      expect(result.current.error).toBeTruthy();
+      expect(result.current.error).toBeTruthy();
+      expect(result.current.loading).toBeFalsy();
+    });
+  });
 });
